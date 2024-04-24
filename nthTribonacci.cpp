@@ -23,6 +23,7 @@ int finding(int n, unordered_map<int, int> &mpp)
     else result = finding(n - 1, mpp) 
                   + finding( n - 2, mpp) 
                   + finding(n -3, mpp);
+    mpp[n] = result;
     return result;
 }
 
